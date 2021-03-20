@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+
+<div class="row">
+                        <div class="col-md-7 mb-4">
+                            <div class="card h-100"><a href="#"></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">Digital Communication</h4>
+                                    <h6 class="text-muted card-subtitle mb-2">ECC4111</h6>
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><button class="btn btn-primary" type="button">View Project<br></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--class link -->
+                        <div class="col-md-5 offset-xl-0 mb-4">
+                            <div class="card h-100">
+                                <h1 style="font-size: 23px;position: absolute;top: 13px;left: 13px;">Class Link:</h1><div class="group">      
+                                 <input type="text" required>
+                                <span class="highlight"></span>
+                                 <span class="bar"></span>
+                                   <label>Label</label>
+                        </div>
+
+<script>
+
+
+'<div class="row">  <div class="col-md-7 mb-4"> <div class="card h-100"><a href="#"></a> <div class="card-body"> <h4 class="card-title">Digital Communication</h4> <h6 class="text-muted card-subtitle mb-2">ECC4111</h6><p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><button class="btn btn-primary" type="button">View Project<br></button> </div></div></div><!--class link --> <div class="col-md-5 offset-xl-0 mb-4"><div class="card h-100"><h1 style="font-size: 23px;position: absolute;top: 13px;left: 13px;">Class Link:</h1><div class="group"> </div>'
+<div class="row">
+                        <div class="col-md-7 mb-4">
+                            <div class="card h-100"><a href="#"></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">Digital Communication</h4>
+                                    <h6 class="text-muted card-subtitle mb-2">ECC4111</h6>
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><button class="btn btn-primary" type="button">View Project<br></button>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="col-md-5 offset-xl-0 mb-4">
+                                <div class="card h-100">
+                                <h1 style="font-size: 23px;position: absolute;top: 13px;left: 13px;">Class Link:</h1><div class="group">      
+                                <input type="text" required>
+                                 <span class="highlight"></span>
+                                      <span class="bar"></span>
+                                         <label>Label</label>
+                             </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+
+
+
+
+
+</script>
+
+
+ <script>
+    
+    $(document).ready(function(){
+
+        retrieve_data();
+
+        function retrieve_data()
+        {
+
+            var xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+             classes = JSON.parse(this.responseText);
+             var length = classes.length;
+          //   if (length ==null)
+         //    {
+
+             
+             console.log(length);
+             console.log(classes);
+           // document.getElementById("today").innerHTML = classes[1].Day;
+            var classcode;
+            var classname;
+            var description;
+            var startime;
+            var duration;
+            var link;
+            var lecturer;
+            var i;
+            var full_data=[];
+            full_data[0]= '<h1 class="my-4" id ="today">Today</h1>'
+              for (i = 0; i <classes.length; i++){
+                 
+                 classcode = classes[i].Course_code;
+                 classname = classes[i].Course_name;
+                 description = classes[i].Course_description;
+                 startime = classes[i].Start_time;
+                 duration = classes[i].Duration;
+                 link = classes[i].Course_link;
+                 lecturer =classes[i].Full_name;
+				                
+				// fulldata[i+1] = '<tr id="row'+i+'"><td id="checkbox" ><input type ="checkbox" id="check'+i+'" class="check_box"></td><td id="first_name'+i+'">' + firstname + '</td><td id="last_name'+i+'">' + lastname + '</td><td><button type="button" name="update" id="update'+i+'" class="btn_update" style= "Background-color : orange">Update</button></td><td><button type="button" id="delete'+i+'" class="btn_delete" style= "Background-color :red">Delete</button></td></tr>'; 
+                full_data[i+1]= '<div class="row">  <div class="col-md-7 mb-4"> <div class="card h-100"><a href="#"></a> <div class="card-body"> <h4 class="card-title">'+classname+'</h4> <h6 class="text-muted card-subtitle mb-2">'+classcode+'</h6><h6 class="text-muted card-subtitle mb-2">Start at :'+startime+'Hours</h6><h6 class="text-muted card-subtitle mb-2">Duration:'+duration+'Hours</h6><h6 class="text-muted card-subtitle mb-2">Lecturer name :'+lecturer+'</h6><p class="card-text">'+description+'</p> </div></div></div><!--class link --> <div class="col-md-5 offset-xl-0 mb-4"><div class="card h-100"><h1 style="font-size: 23px;position: absolute;top: 13px;left: 13px;">Class Link:</h1><div class="group"><a href="'+link+'" target="_blank">'+link+'</a></div></div><hr>'
+                                ='<div class="row"><div class="col-md-7 mb-4"> <div class="card h-100"><a href="#"></a><div class="card-body"> <h4 class="card-title">'+classname+'</h4><h6 class="text-muted card-subtitle mb-2">'+classcode+'</h6><h6 class="text-muted card-subtitle mb-2">Start at: '+startime+'</h6><h6 class="text-muted card-subtitle mb-2">Duration: '+duration+'</h6><h6 class="text-muted card-subtitle mb-2">Lecturer: '+lecturer+'</h6><p class="card-text">'+description+'</p> <br></div></div></div><div class="col-md-5 mb-4"><div class="card h-100"><h1 style="font-size: 23px;position: absolute;top: 13px;left: 13px;">Class Link:</h1><div class="group"><a href="'+link+'" target="_blank">'+link+'</a></div> </div></div><hr>'              
+                 //inputarray[i]= index_number;
+				
+                full_data ='<h1 class="my-4">&lt;hari ini&gt; Classes :D</h1>'+
+                   '<div class="row">'+
+                        '<div class="col-md-7 mb-4">'+
+                           '<div class="card h-100"><a href="#"></a>'+
+                                '<div class="card-body">' +
+                                    '<h4 class="card-title">'+classname+'</h4>'
+                                   '<h6 class="text-muted card-subtitle mb-2">'+classcode+'</h6>'+
+                                   '<h6 class="text-muted card-subtitle mb-2">'+startime+'</h6>'+
+                                   '<h6 class="text-muted card-subtitle mb-2">'+duration+'</h6>'+
+                                    '<p class="card-text">'+description+'</p>'+
+                                '</div>'+
+                           '</div>'+
+                        '</div>'+
+                            '<div class="col-md-5 offset-xl-0 mb-4">'+
+                                '<div class="card h-100">'+
+                                '<h1 style="font-size: 23px;position: absolute;top: 13px;left: 13px;">Class Link:</h1><div class="group">'+      
+                                '<a href="'+link+'" target="_blank">'+link+'</a>'+
+                             '</div>'+
+                            '</div>'+
+                        '</div>'+
+                    '</div>'+
+                    '<hr>'
+
+
+		    	                }  
+             
+             document.getElementById("today_class").innerHTML = full_data;
+             console.log(full_data);
+             
+           // }
+         }
+                };
+            xmlhttp.open("GET", "assets/php/dashboard_today.php", true);
+            xmlhttp.send();
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    });
+    
+    
+    
+    
+    
+    </script>
+
+</html
